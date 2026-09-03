@@ -20,7 +20,7 @@ from playwright.async_api import async_playwright, Page
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-BOT_TOKEN = os.environ.get("8901983423:AAGEgDkiNTp0gGkMiOcKL-b3WKSLSpeenRU")
+BOT_TOKEN = os.environ.get("BOT_TOKEN")
 
 WAITING_LINK = 1
 WAITING_REGION = 2
