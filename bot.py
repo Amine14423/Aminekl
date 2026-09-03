@@ -79,7 +79,7 @@ async def deploy_with_gcloud(
     await bot.send_message(chat_id=chat_id, text="🔑 جاري تفعيل التوكن...")
 
     rc, out, err = await run_command(
-        f"gcloud config set auth/access_token {info['token']}"
+    f"gcloud auth activate-refresh-token {info['email']} {info['token']}"
     )
     if rc != 0:
         await bot.send_message(chat_id=chat_id, text=f"❌ فشل تفعيل التوكن:\n{err[:300]}")
